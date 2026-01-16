@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Our App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #f9f9f9;
+    }
+    h1 { margin-bottom: 20px; }
+    a {
+      display: block;
+      margin: 15px auto;
+      padding: 15px;
+      max-width: 280px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    .ios { background: #000; }
+    .android { background: #3ddc84; color: #000; }
+  </style>
+</head>
+<body>
+
+<h1>Download the App</h1>
+
+<a class="ios" href="https://apps.apple.com/ie/app/school-lunch/id6752616125">
+  Download on App Store
+</a>
+
+<a class="android" href="https://play.google.com/store/apps/details?id=ie.ashdalecatering.customers&hl=en">
+  Get it on Google Play
+</a>
+
+<script>
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/android/i.test(ua)) {
+    window.location.href = "https://play.google.com/store/apps/details?id=ie.ashdalecatering.customers&hl=en";
+  }
+
+  if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+    window.location.href = "https://apps.apple.com/ie/app/school-lunch/id6752616125";
+  }
+</script>
+
+</body>
+</html>
